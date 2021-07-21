@@ -1,0 +1,21 @@
+/*-----------
+    HEADER
+-------------*/
+
+.header {
+  height: 72px;
+  background-color: var(--primary-color);
+}
+
+.header-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.header__logo {
+  height: 48px;
+}
+.logo {
+  height: 100%;
+}

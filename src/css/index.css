@@ -1,0 +1,155 @@
+/*-----------
+    VARS
+-------------*/
+
+:root {
+  --primary-color: #516aff;
+  --text-disabled-color: rgba(0, 0, 0, 0.6);
+  --disabled-color: rgba(0, 0, 0, 0.42);
+  --hover-color: rgba(0, 0, 0, 0.6);
+}
+
+/*-----------
+    RESET
+-------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-delay: 9999s;
+  transition-delay: 9999s;
+}
+
+/*-----------
+    TIPOGRAPHY
+-------------*/
+
+.title1 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-body {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.text-error {
+  font-size: 0.875rem;
+  color: red;
+  margin-bottom: 1rem;
+}
+
+/*-----------
+    GRID CONTAINER
+-------------*/
+
+.main-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: calc(100vh - 72px);
+  overflow: auto;
+}
+
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 544px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+.demo-container {
+  margin-top: 3rem;
+}
+
+/*
+  * MATERIAL-ICONS
+*/
+
+.material-icons-outlined.red {
+  color: red;
+}
+.material-icons-outlined.green {
+  color: green;
+}
+.material-icons-outlined.blue {
+  color: blue;
+}
+
+.material-icons-outlined.md-18 {
+  font-size: 18px;
+}
+.material-icons-outlined.md-24 {
+  font-size: 24px;
+}
+.material-icons-outlined.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/*
+* BASE
+*/
+
+.link {
+  cursor: pointer;
+  height: 24px;
+}
+.link.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
