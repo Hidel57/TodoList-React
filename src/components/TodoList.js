@@ -1,9 +1,10 @@
-import TodoItem from './TodoItem';
+import TodoItem from "./TodoItem"
 
-const TodoList = ({ filteredTodos, settodo }) => {
+const TodoList = (props) => {
+  const { filteredTodos, settodo } = props
   return (
     <div className="cards-container">
-      {filteredTodos.map(todo => (
+      {filteredTodos.map((todo) => (
         <TodoItem
           key={todo.id}
           todo={todo}
@@ -11,7 +12,7 @@ const TodoList = ({ filteredTodos, settodo }) => {
         />
       ))}
     </div>
-  );
+  )
 }
 
-export default TodoList;
+export default TodoList
