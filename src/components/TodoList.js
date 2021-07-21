@@ -7,7 +7,7 @@ const TodoList = ({ filteredTodos, settodo }) => {
         <TodoItem
           key={todo.id}
           todo={todo}
-          settodo={settodo}
+          settodo={settodo} // no jala undefined
         />
       ))}
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import Fab from "./Fab";
 import Header from "./Header";
@@ -6,7 +7,7 @@ import MainSection from "./MainSection";
 import NavBar from "./NavBar";
 import TodoForm from "./TodoForm";
 
-function App() {
+const App = () => {
   const [todo, settodo] = useState({
     id: '',
     title: '',
@@ -21,17 +22,18 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <Header />
       <NavBar />
-      <MainSection settodo={settodo} />
+      <Route exact path='/:filter?' component={MainSection} />
+      {/* <MainSection settodo={settodo} /> */}
       <TodoForm
         todo={todo}
         handleChange={handleChange}
         settodo={settodo}
       />
       <Fab/>
-    </React.Fragment>
+    </BrowserRouter>
   );
 }
 

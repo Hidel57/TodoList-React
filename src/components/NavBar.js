@@ -3,9 +3,9 @@ import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../redux/visibilityFilter
 import LinkContainer from '../containers/LinkContainer'
 
 const FILTER_TITLES = {
-  [SHOW_ALL]: 'all',
-  [SHOW_ACTIVE]: 'active',
-  [SHOW_COMPLETED]: 'completed'
+  [SHOW_ALL]: 'All',
+  [SHOW_ACTIVE]: 'Active',
+  [SHOW_COMPLETED]: 'Completed'
 }
 
 const NavBar = () => {
@@ -16,7 +16,9 @@ const NavBar = () => {
             <ul className="navbar-list">
               {Object.keys(FILTER_TITLES).map(filter => (
                 <li key={filter} className="navbar-list__item">
-                  <LinkContainer filter={filter}>{FILTER_TITLES[filter]}</LinkContainer>
+                  <LinkContainer filter={filter}>
+                    {FILTER_TITLES[filter]}
+                  </LinkContainer>
                 </li>
               ))}
             </ul>

@@ -1,9 +1,9 @@
 import TodoListContainer from "../containers/TodoListContainer";
 
-const MainSection = ({ settodo }) => {
+const MainSection = (props) => {
   return (
     <section className="container">
-      <TodoListContainer settodo={settodo} />
+      <TodoListContainer settodo={props.settodo} filter={props.match.params.filter || 'show_all'} />
     </section>
   );
 }
