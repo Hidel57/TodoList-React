@@ -1,21 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const TodoInfo = ({ todo, show, setshow }) => {
+const TodoInfo = (props) => {
+  const { todo } = props
   return (
-    <div className="modal" style={show ? { display: 'block' } : {}}>
-      <div className="modal--container">
-        <div className="demo-container">
-          <h2 className="title1">{todo.title}</h2>
-          <p className="text-body">{todo.text}</p>
-          <button
-              className="icon-btn material-icons-outlined green"
-              onClick={() => setshow(false)}
-          >
-              done
-          </button>
-        </div>
-      </div>
+    <div>
+      <h2 className="title1">{todo.title}</h2>
+      <p className="text-body">{todo.text}</p>
     </div>
   )
 }
-export default TodoInfo
+const mapStateToProps = state => ({
+  todo: state.todo
+})
+
+export default connect(mapStateToProps)(TodoInfo)

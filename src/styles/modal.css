@@ -2,8 +2,8 @@
     MODAL
 -------------*/
 
-.modal {
-  display: none;
+.overlay {
+  display: none; /*toggle*/
   position: fixed;
   z-index: 1;
   left: 0;
@@ -14,25 +14,29 @@
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 8px;
 }
 
-.modal--container {
+.modal {
   position: relative;
   background-color: #fefefe;
-  top: 72px;
-  padding: 0 1rem;
+  top: 96px;
   border-radius: 8px;
   border: 2px solid var(--primary-color);
   width: 100%;
   max-width: 400px;
-  height: calc(100% - 72px);
+  height: max-content;
+  z-index: 100;
   margin-left: auto;
   margin-right: auto;
-  z-index: 100;
 }
 
-@media screen and (min-width: 400px) {
-  .modal--container {
-    height: 408px;
-  }
+.modal-container {
+  padding: 1rem;
+}
+
+.modal__close {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }

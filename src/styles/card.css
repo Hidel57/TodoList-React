@@ -3,8 +3,7 @@
 */
 
 .cards-container {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
 }
 
 .card {
@@ -26,13 +25,16 @@
 }
 
 .card-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 78% max-content;
   align-items: center;
 }
 
 .card-info {
   width: 100%;
+  cursor: pointer;
 }
+
 .card__header {
   padding: 0.5rem 0.5rem 0 0;
 }
@@ -63,10 +65,6 @@
   overflow: hidden;
 }
 
-.card__actions {
+.card__footer {
   display: flex;
-}
-
-.card__actions-items {
-  padding-left: 8px;
 }

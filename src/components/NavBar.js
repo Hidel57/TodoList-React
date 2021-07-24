@@ -1,4 +1,4 @@
-import '../css/navbar.css'
+import '../styles/navbar.css'
 import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../redux/visibilityFilter'
 import LinkContainer from '../containers/LinkContainer'
 

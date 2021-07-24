@@ -27,7 +27,7 @@ const todos = (state = readTasks(), action) => {
           id: Date.now(),
           title: action.todo.title,
           text: action.todo.text,
-          state: false
+          completed: false
         }
       ]
     case EDIT_TODO:
@@ -44,7 +44,7 @@ const todos = (state = readTasks(), action) => {
       changeStateTask(action.id)
       return state.map(todo =>
         todo.id === action.id ?
-          { ...todo, state: !todo.state } :
+          { ...todo, completed: !todo.completed } :
           todo
         )
     default: return state

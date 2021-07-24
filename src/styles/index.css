@@ -3,7 +3,7 @@
 -------------*/
 
 :root {
-  --primary-color: #516aff;
+  --primary-color: #2f2f2f;
   --text-disabled-color: rgba(0, 0, 0, 0.6);
   --disabled-color: rgba(0, 0, 0, 0.42);
   --hover-color: rgba(0, 0, 0, 0.6);
@@ -68,50 +68,6 @@ input:-webkit-autofill:active {
   font-size: 0.875rem;
   color: red;
   margin-bottom: 1rem;
-}
-
-/*-----------
-    GRID CONTAINER
--------------*/
-
-.main-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  height: calc(100vh - 72px);
-  overflow: auto;
-}
-
-.container {
-  width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 544px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 736px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1170px;
-  }
-}
-
-.demo-container {
-  margin-top: 3rem;
 }
 
 /*

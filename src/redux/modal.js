@@ -9,13 +9,19 @@ const HIDE_MODAL = 'HIDE_MODAL'
 * REDUCER
 */
 
-const Modal = (state=false, action) => {
+const Modal = (showModal=false, action) => {
   switch (action.type) {
     case SHOW_MODAL:
-      return state = action.state
+      return {
+        showModal: true,
+        typeModal: action.typeModal
+      }
     case HIDE_MODAL:
-      return action.state = false
-    default: return state
+      return {
+        showModal: false,
+        typeModal: ''
+      }
+    default: return showModal
   }
 }
 
@@ -25,6 +31,11 @@ export default Modal
 * ACTIONS
 */
 
-export const toggleModal = state => ({
-  type: SHOW_MODAL, state
+export const showModal = (typeModal) => ({
+  type: SHOW_MODAL,
+  typeModal
+})
+
+export const hideModal = () => ({
+  type: HIDE_MODAL,
 })
