@@ -1,14 +1,14 @@
 import { combineReducers } from "redux";
-import todo from "./todo"
-import todos from "./todos"
+import todoReducer from "./todoReducer"
+import todosReducer from "./todosReducer"
 import visibilityFilter from "./visibilityFilter"
-import modal from "./modal"
+import modalReducer from "./modalReducer"
 
 const rootReducer = combineReducers({
-  todo,
-  todos,
+  todoReducer,
+  todosReducer,
   visibilityFilter,
-  modal
+  modalReducer
 })
 
 export default rootReducer

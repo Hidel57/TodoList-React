@@ -4,7 +4,7 @@ import TodoInfo from './TodoInfo';
 import TodoForm from './TodoForm';
 
 import { connect } from 'react-redux';
-import { hideModal } from '../redux/modal'
+import { hideModal } from '../redux/modalReducer'
 
 const Modal = (props) => {
   const { modal } = props
@@ -17,7 +17,7 @@ const Modal = (props) => {
           <div className="modal__close">
             {modal.typeModal !== 'form' ?
               <button
-              className="icon-btn material-icons-outlined"
+              className="icon-btn material-icons-outlined dark"
               onClick={() => props.dispatch(hideModal())}
               >
                 close
@@ -37,7 +37,7 @@ const Modal = (props) => {
 }
 
 const mapStateToProps = state => ({
-  modal: state.modal
+  modal: state.modalReducer
 })
 
 export default connect(mapStateToProps)(Modal)

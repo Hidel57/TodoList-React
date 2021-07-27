@@ -11,7 +11,7 @@ const TodoInfo = (props) => {
   )
 }
 const mapStateToProps = state => ({
-  todo: state.todo
+  todo: state.todoReducer
 })
 
 export default connect(mapStateToProps)(TodoInfo)

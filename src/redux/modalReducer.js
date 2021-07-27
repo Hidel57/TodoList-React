@@ -8,8 +8,12 @@ const HIDE_MODAL = 'HIDE_MODAL'
 /*
 * REDUCER
 */
+const initialState = {
+  showModal: false,
+  typeModal: ''
+}
 
-const Modal = (showModal=false, action) => {
+const modalReducer = (state=initialState, action) => {
   switch (action.type) {
     case SHOW_MODAL:
       return {
@@ -21,11 +25,11 @@ const Modal = (showModal=false, action) => {
         showModal: false,
         typeModal: ''
       }
-    default: return showModal
+    default: return state
   }
 }
 
-export default Modal
+export default modalReducer
 
 /*
 * ACTIONS

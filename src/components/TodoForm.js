@@ -2,9 +2,9 @@ import '../styles/textfield.css'
 import '../styles/modal.css'
 
 import { connect } from 'react-redux';
-import { hideModal } from '../redux/modal'
-import { addTodo, editTodo } from '../redux/todos'
-import { clearTodo } from '../redux/todo'
+import { hideModal } from '../redux/modalReducer'
+import { addTodo, editTodo } from '../redux/todosReducer'
+import { clearTodo } from '../redux/todoReducer'
 
 import { useState } from 'react';
 
@@ -12,6 +12,7 @@ const TodoForm = (props) => {
   const { formValues, dispatch } = props
   const [error, seterror] = useState(null)
   const [todo, settodo] = useState(formValues)
+  console.log(todo)
 
   const handleChange = e => {
     settodo({
@@ -57,11 +58,11 @@ const TodoForm = (props) => {
   }
 
   return (
-    <div id="formModal"
+    <div
       style={props.modal.showModal ? { display: 'block' } : {}}
     >
-      <h2 id="formTitle" className="title1">
-          {formValues.id !== '' ? 'Edit Task' : 'Add Task'}
+      <h2 className="title1">
+          {todo.id !== '' ? 'Edit Task' : 'Add Task'}
       </h2>
         {error ? <p className="text-error">{error}</p> : null}
         <p id="textError" className="text-error"></p>
@@ -85,14 +86,14 @@ const TodoForm = (props) => {
             <label className='text-field__label' htmlFor='text'>text</label>
           </div>
           {formValues.id ?
-          <button id="editTaskBtn"
+          <button
             // type="submit"
             // onClick={() => handleEditTodo(todo.id)}
             className="icon-btn material-icons-outlined blue">
               edit
             </button>
           :
-          <button id="addTaskBtn"
+          <button
             // type="submit"
             // onClick={() => handleAddTodo()}
             className="icon-btn material-icons-outlined green">
@@ -110,8 +111,8 @@ const TodoForm = (props) => {
 }
 
 const mapStateToProps = state => ({
-  modal: state,
-  formValues: state.todo 
+  modal: state.modalReducer,
+  formValues: state.todoReducer
 })
 
 export default connect(mapStateToProps)(TodoForm);

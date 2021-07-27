@@ -7,10 +7,9 @@
 }
 
 .card {
-  border-radius: 8px;
   height: max-content;
-  background-color: #fff;
-  border-bottom: 1px solid var(--disabled-color);
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
   max-width: 360px;
   padding-bottom: 4px;
   padding-top: 8px;
@@ -44,7 +43,7 @@
 }
 
 .card__title {
-  color: rgb(35, 35, 35);
+  color: var(--font-high-color);
   font-family: "Lucida", serif;
   font-size: 1rem;
   height: 1.25rem;
@@ -59,7 +58,7 @@
 .card__text {
   white-space: nowrap;
   font-size: 0.75rem;
-  color: var(--text-disabled-color);
+  color: var(--font-medium-color);
   height: 1.125rem;
   text-overflow: ellipsis;
   overflow: hidden;

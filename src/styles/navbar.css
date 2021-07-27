@@ -23,5 +23,5 @@
 }
 
 .navbar-list__item {
-  color: var(--text-disabled-color);
+  color: var(--font-high-color);
 }

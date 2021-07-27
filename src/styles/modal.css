@@ -19,7 +19,7 @@
 
 .modal {
   position: relative;
-  background-color: #fefefe;
+  background-color: var(--surface-dp3-color);
   top: 96px;
   border-radius: 8px;
   border: 2px solid var(--primary-color);

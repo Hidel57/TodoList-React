@@ -4,17 +4,21 @@
 
 .header {
   height: 72px;
-  background-color: var(--primary-color);
+  background-color: var(--surface-dp1-color);
+  /* border-bottom: 2px solid var(--border-color); */
+  box-shadow: 2px 2px 2px #000;
 }
 
 .header-container {
   display: flex;
   height: 100%;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo {
-  height: 48px;
+  width: max-content;
+  color: var(--font-high-color);
 }
 .logo {
   height: 100%;

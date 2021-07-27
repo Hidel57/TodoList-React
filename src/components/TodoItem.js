@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import '../styles/card.css'
 import '../styles/iconbutton.css'
 
-import { deleteTodo, completeTodo } from '../redux/todos'
-import { readTodo } from '../redux/todo'
-import { showModal } from '../redux/modal'
+import { deleteTodo, completeTodo } from '../redux/todosReducer'
+import { readTodo } from '../redux/todoReducer'
+import { showModal } from '../redux/modalReducer'
 import React from 'react';
 
 const TodoItem = ({ todo, dispatch }) => {
@@ -35,21 +35,24 @@ const TodoItem = ({ todo, dispatch }) => {
         <footer className="card__fotter">          
           <div className="icon-btn-group">
             <div className="icon-btn-group__item">
-              <button className="icon-btn size-24 material-icons-outlined md-18 green"
+              <button
+                className="icon-btn size-24 material-icons-outlined md-18 dark"
                 onClick={() => dispatch(completeTodo(todo.id))}
                 >
                 {todo.completed ? 'replay' : 'done'}
               </button>
             </div>
             <div className="icon-btn-group__item">
-              <button className="icon-btn size-24 material-icons-outlined blue md-18"
+              <button
+                className="icon-btn size-24 material-icons-outlined md-18 dark"
                 onClick={() => handleEditTodo(todo.id)}
               >
                 edit
               </button>
             </div>
             <div className="icon-btn-group__item">
-              <button className="icon-btn size-24 material-icons-outlined red md-18"
+              <button
+                className="icon-btn size-24 material-icons-outlined md-18 dark"
                 onClick={() => dispatch(deleteTodo(todo.id))}
               >
                 delete

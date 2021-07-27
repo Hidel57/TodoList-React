@@ -15,7 +15,7 @@ const getVisibleTodos = (todos, filter) => {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  filteredTodos: getVisibleTodos(state.todos, ownProps.filter)
+  filteredTodos: getVisibleTodos(state.todosReducer, ownProps.filter)
 })
 
 const TodoListContainer = connect(mapStateToProps)(TodoList)
